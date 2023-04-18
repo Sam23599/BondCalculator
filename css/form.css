@@ -1,0 +1,208 @@
+/* Reset styles for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply styles to all forms */
+form {
+  margin: 0 10px;
+}
+
+/* Style labels for form inputs */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style common form input types */
+input[type=text],
+input[type=number],
+input[type=file],
+input[type=password],
+textarea {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+input[type=radio] {
+  margin-right: 5px;
+}
+
+/* Apply styles to specific form inputs */
+.form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  border: 3px solid rgb(63, 73, 127);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  color: black;
+}
+/*
+.form_video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.form_video {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}*/
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit:cover;
+}
+
+#myVideo {
+  filter: brightness(10%);
+  height: auto;
+  width: 100%;
+}
+
+/* Apply styles to form overlays */
+/*.bg_col {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(63, 73, 127, 0.722);
+}*/
+
+.content {
+  position: absolute;
+  left: 5%;
+/*   transform: translate(-50%, -90%); */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 3rem 5rem;
+/*   max-width: 800px; */
+  max-height:600;
+  box-shadow: 2px 5px 18px -8px rgba(63,73,127,1);
+  overflow-y: auto;
+  height: 450px;
+  top: 15%;
+/*   bottom: -10%; */
+}
+.content2 {
+  position: absolute;
+  left: 55%;
+/*   transform: translate(-50%, -90%); */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 3rem 5rem;
+/*   max-width: 900px; */
+  max-height:600;
+  box-shadow: 2px 5px 18px -8px rgba(63,73,127,1);
+  overflow-y: auto;
+  height: 450px;
+  top: 15%;
+/*   bottom: -10%; */
+}
+
+.content label {
+  display: block;
+  color: rgb(63, 73, 127);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+
+}
+.content2 label {
+  display: block;
+  color: rgb(63, 73, 127);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+
+}
+.text_main {
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: rgb(247, 192, 74);
+  text-align: center;
+  width: 100%;
+}
+
+
+input[type="submit"] {
+  display: block;
+  margin-top: 2rem;
+  padding: 0.6rem 1rem;
+  border: 4px solid rgb(247, 192, 74);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: rgb(247, 192, 74);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: rgb(247, 192, 74);
+  color: rgb(63, 73, 127);
+  border-color: transparent;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#submit-btn {
+  display: block;
+  width: 30%;
+  position: absolute;
+  bottom: 20px;
+  margin-left: 35%;
+  transform: translateX(-50%)
+  padding:10px;
+  border: 4px solid rgb(247, 192, 74);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: rgb(247, 192, 74);
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: #3e8e41;
+  border-color: transparent;
+}
+
+.logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.logo img {
+  width: 60px; /* adjust as needed */
+  height: 60px; /* adjust as needed */
+  background-color: rgba(63, 73, 127, 0.722);
+  background:rgba(220,20,60,0.5);
+}

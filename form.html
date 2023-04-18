@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/form.css">
+
+</head>
+<body>
+  <div >
+      <h1 class="text_main">Question and Answer...</h1>
+    <!--<video autoplay muted loop id="myVideo" width="1" controls>
+      <source src="images/videoplayback.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>-->
+    <video width="100" height="100" autoplay muted loop id="bg-video">
+        <source src="images/colored_people.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+    <div >
+      <!--<form id="question-form" method="post">-->
+        <div class="row row-no-gutters">
+        <div class="col-md-1"></div>
+          <div class="col-md-5">
+          <form id= "user1">
+
+            <div class="content">
+            <h2>User 1 Details</h2>
+      <label for="name1"><b>Name:</b></label>
+      <input type="text" id="name1" name="name1" placeholder="Enter Name">
+      </br>
+      <label for="age1"><b>Age:</b></label>
+      <input type="number" id="age1" name="age1" min="16" max="60" placeholder="Enter Age">
+      </br>
+      <label for="gender1"> <b>Gender:</b></label>
+      <input type="text" id="gender1" name="gender1" placeholder="Enter Gender">
+      </br>
+      <label for="duration_of_relationship"> <b>Relationship Duration:</b></label>
+      <input type="number" id="duration_of_relationship" name="duration_of_relationship" placeholder="Enter Duration">
+      </br>
+      <label for="smoking_habit"> <b>Smoking Habit:</b></label>
+      <input type="radio" id="smokeY" name="smoking_habit" value="True">
+      <label for="smokeY">Yes</label>
+      <input type="radio" id="smokeN" name="smoking_habit" value="False">
+      <label for="smokeN">No</label>
+      </br>
+      <label for="covid_19"> <b>Covid-19:</b></label>
+      <input type="radio" id="CovidY" name="covid_19" value="True">
+      <label for="CovidY">Yes</label>
+      <input type="radio" id="CovidN" name="covid_19" value="False">
+      <label for="CovidN">No</label>
+      </br>
+      <label for="heart_medication"> <b>Heart Medication:</b></label>
+      <input type="radio" id="mediY" name="heart_medication" value="True">
+      <label for="mediY">Yes</label>
+      <input type="radio" id="mediN" name="heart_medication" value="False">
+      <label for="mediN">No</label>
+      </br>
+      <label for="audio_record_1"> <b>Record Audio:</b></label>
+      <input type="file" id="audio_record_1" accept="audio/*" capture="microphone" required>
+      <br>
+            </div>
+          </form>
+          </div>
+
+          <div class="col-md-5">
+          <form id="user2">
+
+            <div class="content2">
+            <h2>User 2 Details</h2>
+            <label for="name2"><b>Name:</b></label>
+        <input type="text" id="name2" name="name2" placeholder="Enter Name">
+        </br>
+        <label for="age2"><b>Age:</b></label>
+        <input type="number" id="age2" name="age2" min="16" max="60" placeholder="Enter Age">
+        </br>
+        <label for="gender2"> <b>Gender:</b></label>
+        <input type="text" id="gender2" name="gender2" placeholder="Enter Gender">
+        </br>
+        <label for="smoking_habit2"> <b>Smoking Habit:</b></label>
+        <input type="radio" id="smokeY2" name="smoking_habit2" value="True">
+        <label for="smokeY2">Yes</label>
+        <input type="radio" id="smokeN2" name="smoking_habit2" value="False">
+        <label for="smokeN2">No</label>
+        </br>
+        <label for="covid_19_2"> <b>Covid-19:</b></label>
+        <input type="radio" id="CovidY2" name="covid_19_2" value="True">
+        <label for="CovidY2">Yes</label>
+        <input type="radio" id="CovidN2" name="covid_19_2" value="False">
+        <label for="CovidN2">No</label>
+        </br>
+        <label for="heart_medication2"> <b>Heart Medication:</b></label>
+        <input type="radio" id="mediY2" name="heart_medication2" value="True">
+        <label for="mediY">Yes</label>
+        <input type="radio" id="mediN2" name="heart_medication2" value="False">
+        <label for="mediN2">No</label>
+        </br>
+        <label for="experiment_date"> <b>Date:</b></label>
+        <input type="date" id="experiment_date" name="experiment_date">
+        </br>
+        <label for="audio_record_2"> <b>Record Audio:</b></label>
+        <input type="file" id="audio_record_2" accept="audio/*" capture="microphone" required>
+        <br>
+            </div>
+          </form>
+          </div>
+        </div>
+
+    </div>
+    <button href="result.html" type="submit" class="btn btn-primary" id="submit-btn">Synchronization</button>
+  </div>
+
+
+  <div class="logo">
+    <img src="./images/blue-1153340_640.png" alt="Logo">
+    <img src="./images/blue-1153340_640.png" alt="Logo">
+<!--     <img src="./images/blue-1153340_640.png" alt="Logo"> -->
+  </div>
+
+
+  <script src="js/form.js"></script>
+  <script src="bootstrap/js/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+  <script>
+      // Get the forms and the submit button
+      const user1Form = document.getElementById('user1');
+      const user2Form = document.getElementById('user2');
+      const submitBtn = document.getElementById('submit-btn');
+
+      // Add an event listener to the submit button
+      submitBtn.addEventListener('click', (event) => {
+          event.preventDefault(); // Prevent the default form submission behavior
+
+          // Use FormData API to create a new FormData object and append the audio files to it
+          const formData = new FormData();
+          formData.append('audio_record_1', user1Form.querySelector('input[type=file]').files[0]);
+          formData.append('audio_record_2', user2Form.querySelector('input[type=file]').files[0]);
+
+          // Use fetch API to send the form data to the server
+          fetch('animation.html', {
+              method: 'POST',
+              body: formData
+          })
+          .then(response => {
+              console.log('Form submitted successfully');
+              // Do something with the server response if needed
+          })
+          .catch(error => {
+              console.error('Form submission failed', error);
+          });
+      });
+  </script>
+</body>
+</html>

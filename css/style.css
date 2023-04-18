@@ -1,0 +1,186 @@
+/* Define variables for commonly used values */
+:root {
+  --primary-color: #ed6db0;
+  --secondary-color: #17202A;
+  --text-color: #333;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Apply box-sizing and reset margin and padding for all elements */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set font family for headings, paragraphs, and links */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Calibri", sans-serif;
+}
+
+/* Style the main section */
+.lovely_home {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+/* Style the left section */
+.lovely_home .first {
+  width: 40%;
+  padding-left: 80px;
+}
+
+.lovely_home .first h4 {
+  margin-top: 30px;
+  padding-block: 10px;
+}
+
+/* Style the right section */
+.lovely_home .second {
+  width: 60%;
+  padding-top: 50px;
+  padding-right: 80px;
+  position: relative;
+  background-image: url('../images/RIGHT_BG-removebg-preview.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 800px;
+}
+
+.lovely_home .second a {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 40px;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 30px;
+  color: #ffffff;
+  font-weight: 600;
+  float: right;
+  background-color: var(--primary-color);
+  border-radius: 40px;
+  box-shadow: var(--box-shadow);
+  transition: all 0.2s ease-in-out;
+}
+
+.lovely_home .second a:hover {
+  background-color: #fca7d6;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.btn_nav {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 40px;
+    padding: 10px 20px;
+    background-color: rgba(0,250,154,0.5);
+}
+/* Style the navigation */
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+nav a {
+  display: inline-block;
+  margin-left: 20px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+.lovely_home .sixth {
+font-size: 1.4rem;
+margin-top: 100px;
+padding: 20px;
+background-color: #f2f2f2;
+border-radius: 10px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lovely_home .sixth h1 {
+font-weight: 700;
+font-size: 3rem;
+margin-bottom: 1rem;
+text-shadow: -2px -1px 5px rgba(105,171,202,0.6);
+color: #333333;
+}
+
+.lovely_home .sixth p {
+font-size: 1.6878rem;
+margin-top: 1rem;
+color: #666666;
+line-height: 1.5;
+}
+
+.lovely_home .sixth a {
+display: inline-block;
+text-decoration: none;
+color: #ffffff;
+background-color: #3a5e77;
+padding: 0.7rem 4rem;
+margin-top: 20px;
+letter-spacing: 2px;
+font-weight: 700;
+border-radius: 40px;
+text-shadow: -1px 1px 2px rgba(0,0,0,0.2);
+transition: all 0.2s ease-in-out;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lovely_home .sixth a:hover {
+background-color: #264653;
+}
+
+.lovely_home .seveenth {
+position: absolute;
+right: 50px;
+bottom: 50px;
+}
+
+.lovely_home .seveenth img {
+display: inline-block;
+/*width: 60px;
+height: 60px;*/
+margin: 20;
+border-radius: 50%;
+object-fit: cover;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.lovely_home .sixth {
+    font-size: 1.4rem;
+}
+.lovely_home .sixth p {
+    font-size: 1.6878rem;
+}
+.lovely_home .sixth h1 {
+    margin-top: 10px;
+}
+
+.logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.logo img {
+  width: 60px; /* adjust as needed */
+  height: 60px; /* adjust as needed */
+}
+
